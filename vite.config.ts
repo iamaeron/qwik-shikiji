@@ -18,11 +18,7 @@ export default defineConfig(() => {
       },
       rollupOptions: {
         // externalize deps that shouldn't be bundled into the library
-        external: [
-          /^node:.*/,
-          ...excludeAll(dependencies),
-          ...excludeAll(peerDependencies),
-        ],
+        external: ["shikiji"],
       },
     },
     plugins: [qwikVite(), tsconfigPaths()],

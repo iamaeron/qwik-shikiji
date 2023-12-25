@@ -1,47 +1,34 @@
-# Qwik Library ⚡️
+# Qwik Shikiji
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik on GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
-- [Partytown](https://partytown.builder.io/)
-- [Mitosis](https://github.com/BuilderIO/mitosis)
-- [Builder.io](https://www.builder.io/)
+Qwik component for powerful code syntax highlighting by [Shikiji](https://shikiji.netlify.app).
 
----
+## Installation
 
-## Project Structure
+Use your preferred package manager, but this snippet uses [pnpm](https://pnpm.io):
 
-Inside your project, you'll see the following directories and files:
-
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── index.ts
+```bash
+pnpm add @iamaeron/qwik-shikiji shikiji
 ```
 
-- `src/components`: Recommended directory for components.
+## Usage
 
-- `index.ts`: The entry point of your component library, make sure all the public components are exported from this file.
+Just import the component and you can use it simply like this:
 
-## Development
+```jsx
+import { QwikShikiji } from "@iamaeron/qwik-shikiji";
+import { Slot } from "builder.io/qwik";
 
-Development mode uses [Vite's development server](https://vitejs.dev/). For Qwik during development, the `dev` command will also server-side render (SSR) the output. The client-side development modules are loaded by the browser.
+export default component$(() => {
+  const exampleCode = `export const CoolQwikSnippet = component$(() => {
+    return (
+        <div>Qwik is awesome!</div>
+    )
+})`;
 
+  return <QwikShikiji code={exampleCode} lang="tsx" />;
+});
 ```
-pnpm dev
-```
 
-> Note: during dev mode, Vite will request many JS files, which does not represent a Qwik production build.
+### Customizing
 
-## Production
-
-The production build should generate the production build of your component library in (./lib) and the typescript type definitions in (./lib-types).
-
-```
-pnpm build
-```
+Please wait for the official docs, I'll try to make it as fast as I can.
