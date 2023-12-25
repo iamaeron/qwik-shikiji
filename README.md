@@ -1,6 +1,6 @@
 # Qwik Shikiji
 
-Qwik component for powerful code syntax highlighting by [Shikiji](https://shikiji.netlify.app).
+Qwik component for beautiful code syntax highlighting by [Shikiji](https://shikiji.netlify.app).
 
 ## Installation
 
