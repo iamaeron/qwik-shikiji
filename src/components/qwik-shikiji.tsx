@@ -1,34 +1,6 @@
 import { component$, useSignal, useStyles$, useTask$ } from "@builder.io/qwik";
-import {
-  BundledLanguage,
-  StringLiteralUnion,
-  SpecialLanguage,
-  getHighlighter,
-  BundledTheme,
-  ThemeRegistration,
-  ThemeRegistrationRaw,
-} from "shikiji";
-
-type Theme =
-  | ThemeRegistration
-  | ThemeRegistrationRaw
-  | StringLiteralUnion<BundledTheme, string>;
-
-interface QwikShikijiProps {
-  code: string;
-  lang: StringLiteralUnion<BundledLanguage | SpecialLanguage, string>;
-  options?: {
-    prepareThemes?: StringLiteralUnion<BundledTheme, string>[] | undefined;
-    showLineNumbers?: boolean;
-    theme?: Theme;
-  };
-  styles?: {
-    maxWidth?: string;
-    maxHeight?: string;
-    fontFamily?: string;
-    fontSize?: string;
-  };
-}
+import { getHighlighter } from "shikiji";
+import { QwikShikijiProps, Theme } from "./types";
 
 export const QwikShikiji = component$<QwikShikijiProps>((props) => {
   const codeSignal = useSignal<string>("");
