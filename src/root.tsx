@@ -1,6 +1,7 @@
+import { component$ } from "@builder.io/qwik";
 import { QwikShikiji } from "./components/qwik-shikiji";
 
-export default () => {
+export default component$(() => {
   const exampleCode = `import { component$ } from "@builder.io/qwik";
 import { QwikTable } from "@iamaeron/qwik-table-component";
   
@@ -99,7 +100,6 @@ export const MyVeryCoolAndGreatTable = component$(() => {
             lang="tsx"
             options={{
               showLineNumbers: true,
-              theme: "dark-plus",
             }}
             styles={{
               maxHeight: "35rem",
@@ -111,4 +111,4 @@ export const MyVeryCoolAndGreatTable = component$(() => {
       </body>
     </>
   );
-};
+});

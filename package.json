@@ -1,6 +1,6 @@
 {
   "name": "@iamaeron/qwik-shikiji",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Qwik component for beautiful code syntax highlighting by Shikiji.",
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",

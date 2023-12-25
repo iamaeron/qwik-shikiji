@@ -47,7 +47,9 @@ export const QwikShikiji = component$<QwikShikijiProps>((props) => {
 
   const defaultTheme: Theme = "dark-plus";
 
-  useTask$(async () => {
+  useTask$(async ({ track }) => {
+    track(() => options?.theme);
+
     const highlighter = await getHighlighter({
       themes: options?.prepareThemes
         ? options.prepareThemes
